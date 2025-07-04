@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engaging Video Player</title>
+    <link rel="stylesheet" href="style.css">
+
+    <meta property="og:title" content="Engaging Video Player">
+    <meta property="og:description" content="Tonton video menarik ini dan temukan lebih banyak konten seru di situs kami!">
+    <meta property="og:image" content="URL_LENGKAP_WEBSITE_ANDA/iwonaplay.jpg">
+    <meta property="og:url" content="URL_LENGKAP_WEBSITE_ANDA_UNTUK_HALAMAN_INI">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Engaging Video Player">
+    <meta name="twitter:description" content="Tonton video menarik ini dan temukan lebih banyak konten seru di situs kami!">
+    <meta name="twitter:image" content="URL_LENGKAP_WEBSITE_ANDA/iwonaplay.jpg">
+
+</head>
+<body>
+    <div class="header">
+        <h1>Your Awesome Video Site</h1>
+        <p>Watch our featured videos and discover more exciting content!</p>
+    </div>
+
+    <div class="main-content-wrapper">
+        <div class="video-section">
+            <div class="video-container">
+                <div class="ad-slot top-banner">
+                    <p>Adsterra Top Banner Ad Space</p>
+                </div>
+
+                <video controls poster="iwonaplay.jpg" id="mainVideoPlayer">
+                    <source src="iwona.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div class="video-info">
+                    <h2>Catchy Main Video Title</h2>
+                    <p class="uploader-name">Uploaded by: Great Creator</p>
+                    <p class="description">A brief description of this video. Tell viewers what's great about it to keep them watching and exploring your site further.</p>
+                </div>
+
+                <a href="https://your-adsterra-direct-link.com" target="_blank" class="download-button ad-trigger">Download Video / Get Offer!</a>
+                <div class="ad-slot bottom-banner">
+                    <p>Adsterra Bottom Banner Ad Space</p>
+                </div>
+            </div>
+        </div>
+        <div class="related-videos">
+            <h2>Related Videos</h2>
+            <div class="related-videos-grid">
+                <a href="https://link-video-terkait-1.com" class="related-video-item">
+                    <img src="path/to/your/thumbnail_video_terkait_1.jpg" alt="Related Video Thumbnail 1">
+                    <div class="title">Shorter Related Video Title</div>
+                    <div class="uploader-name">Another Uploader 1</div>
+                </a>
+                <a href="https://link-video-terkait-2.com" class="related-video-item">
+                    <img src="path/to/your/thumbnail_video_terkait_2.jpg" alt="Related Video Thumbnail 2">
+                    <div class="title">How To Do Something Cool</div>
+                    <div class="uploader-name">Great Creator</div>
+                </a>
+                <a href="https://link-video-terkait-3.com" class="related-video-item">
+                    <img src="path/to/your/thumbnail_video_terkait_3.jpg" alt="Related Video Thumbnail 3">
+                    <div class="title">Must-Know Latest Product Review</div>
+                    <div class="uploader-name">Review Channel</div>
+                </a>
+                <a href="https://link-video-terkait-4.com" class="related-video-item">
+                    <img src="path/to/your/thumbnail_video_terkait_4.jpg" alt="Related Video Thumbnail 4">
+                    <div class="title">Complete Graphic Design Tutorial</div>
+                    <div class="uploader-name">Pro Designer</div>
+                </a>
+                <a href="https://link-video-terkait-5.com" class="related-video-item">
+                    <img src="path/to/your/thumbnail_video_terkait_5.jpg" alt="Related Video Thumbnail 5">
+                    <div class="title">Complete Graphic Design Tutorial Part 2</div>
+                    <div class="uploader-name">Pro Designer</div>
+                </a>
+                <a href="https://link-video-terkait-6.com" class="related-video-item">
+                    <img src="path/to/your/thumbnail_video_terkait_6.jpg" alt="Related Video Thumbnail 6">
+                    <div class="title">Tips for Building a Personal Brand</div>
+                    <div class="uploader-name">Branding Consultant</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial overlay logic (unchanged)
+            const overlay = document.getElementById('mainVideoOverlay');
+            const video = document.getElementById('mainVideoPlayer');
+
+            // Cek apakah elemen overlay ada sebelum mencoba mengakses propertinya
+            // karena di kode yang Anda berikan tidak ada elemen dengan id 'mainVideoOverlay'
+            // Jika Anda memang punya overlay tersembunyi, pastikan id-nya benar
+            if (overlay) { // Tambahkan pengecekan ini
+                if (!sessionStorage.getItem('visitedBefore')) {
+                    overlay.style.display = 'flex';
+                    sessionStorage.setItem('visitedBefore', 'true');
+                } else {
+                    overlay.style.display = 'none';
+                    video.style.display = 'block';
+                }
+            } else {
+                // Jika overlay tidak ditemukan, pastikan video ditampilkan
+                video.style.display = 'block';
+            }
+
+
+            // Optional: To trigger Adsterra popunder on first page click (if not already initiated by Adsterra)
+            // Adsterra's popunder code usually handles this automatically.
+            // document.body.addEventListener('click', function(event) {
+            //     if (!sessionStorage.getItem('popunderOpenedThisSession')) {
+            //         // Do something to trigger Adsterra popunder
+            //         // E.g., load the popunder script again, or call a function provided by Adsterra
+            //         sessionStorage.setItem('popunderOpenedThisSession', 'true');
+            //     }
+            // });
+        });
+    </script>
+</body>
+</html>

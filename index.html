@@ -52,7 +52,28 @@
                     <h2>Iwona Blecharczyk: Ready to Go</h2>
                     <p class="uploader-name">Uploaded by: Iwona Blecharczyk</p>
                     <p class="description">Watch the incredible adventures of Iwona Blecharczyk, a tough female truck driver who conquers the world's most extreme roads! From precision maneuvers to weather challenges, this video will bring you the thrill and excitement behind the wheel of giant trucks. Don't miss the action and unique insights from the Queen of the Road!.</p>
-                </div>
+                	<a href="#" id="downloadButton" class="download-button">Unduh Video</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('downloadButton').addEventListener('click', function(event) {
+        // Mencegah unduhan langsung saat klik pertama
+        event.preventDefault(); 
+
+        // Arahkan ke link pertama
+        window.open('https://www.profitableratecpm.com/i1fwu5tz3?key=57d96b2cf1b1bdd46a55cb218f5d8067', '_blank');
+
+        // Setelah jeda singkat, ubah href tombol untuk mengunduh video
+        setTimeout(() => {
+            this.href = 'alejandra.mp4'; // Mengatur ulang href ke file video
+            this.download = 'alejandra.mp4'; // Mengatur atribut download
+            this.click(); // Memicu klik kedua untuk memulai unduhan
+        }, 1000); // Jeda 1 detik (1000 milidetik) sebelum memicu unduhan
+    });
+</script>
 
 <!--Iklan Adsterra Banner 468x60-->
 <script type="text/javascript">
